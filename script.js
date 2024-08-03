@@ -2,9 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const hintElement = document.getElementById("hint");
     const encodedMessageElement = document.getElementById("encoded-message");
     const jsPuzzleElement = document.getElementById("js-puzzle");
-    const flagElement = document.getElementById("flag");
 
-    let currentStage = 1;
     const secretCode = "hidden_code";
     const encodedText = "SGVsbG8gdGhlcmU="; // Base64 encoded "Hello there"
     const jsPuzzleSolution = 42; // Example solution for a JS-based puzzle
@@ -67,8 +65,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         submit3.addEventListener("click", () => {
             if (parseInt(input3.value) === window.puzzleAnswer) {
+                // Show flag in alert popup
+                alert("flag{follow_me_on_x.com/prplbully}");
                 document.getElementById("stage-3").style.display = 'none';
-                flagElement.style.display = 'block';
                 showHint("");
             } else {
                 showHint("Incorrect answer. Solve the equation correctly.");
