@@ -3,20 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nimmerland's Page</title>
+    <title>Advanced CTF Challenge</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Nimmerland's Page</h1>
-        <p id="intro">Hello, visitor! Who are you?</p>
-        <input type="text" id="username" placeholder="Enter your name">
-        <button id="submitBtn">Submit</button>
-        <p id="result"></p>
-        <p id="hint" class="hidden-hint">Need a hint? Click <span id="hintLink">here</span>.</p>
-        <p id="message" class="hidden-hint">The treasure lies within the console.</p>
+    <div id="content">
+        <h1>Welcome to the Advanced CTF Challenge</h1>
+        <div id="hint"></div>
+        <div id="stage-1" class="stage">
+            <button id="click-1">Click me for a hint</button>
+            <input type="text" id="input-1" placeholder="Enter the code from source">
+            <button id="submit-1">Submit</button>
+        </div>
+        <div id="stage-2" class="stage" style="display:none;">
+            <button id="click-2">Click to decode a message</button>
+            <p id="encoded-message" style="display:none;">Encoded: <span id="encoded-text"></span></p>
+            <input type="text" id="input-2" placeholder="Enter decoded message">
+            <button id="submit-2">Submit</button>
+        </div>
+        <div id="stage-3" class="stage" style="display:none;">
+            <button id="click-3">Click to solve the JavaScript puzzle</button>
+            <p id="js-puzzle" style="display:none;">Solve this equation: <span id="equation"></span></p>
+            <input type="text" id="input-3" placeholder="Enter the answer">
+            <button id="submit-3">Submit</button>
+        </div>
+        <div id="flag" style="display:none;">
+            <p>Congratulations!</p>
+            <p id="flag-text">flag{follow_me_on_x.com/prplbully}</p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
-
