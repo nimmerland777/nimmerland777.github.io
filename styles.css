@@ -41,6 +41,21 @@ button:hover {
     background-color: #777;
 }
 
+.hidden-hint {
+    display: none;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+#hintLink {
+    color: #bb86fc;
+    cursor: pointer;
+}
+
+#hintLink:hover {
+    color: #dbaafc;
+}
+
 #result {
     margin-top: 20px;
     font-size: 1.2em;
