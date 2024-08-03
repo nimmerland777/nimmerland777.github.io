@@ -5,37 +5,52 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 #content {
-    margin-top: 50px;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 600px;
 }
 
 button, input {
-    background-color: #1f1f1f;
-    border: 1px solid #333;
+    background-color: #2c2c2c;
+    border: 1px solid #444;
     color: #ffffff;
     padding: 10px 20px;
     margin: 10px;
     cursor: pointer;
     font-size: 16px;
+    border-radius: 4px;
 }
 
 button:hover {
-    background-color: #333;
+    background-color: #444;
 }
 
 input {
     font-size: 16px;
-    width: 250px;
+    width: calc(100% - 42px); /* Adjust for padding and margin */
+    max-width: 100%;
     text-align: center;
 }
 
 .stage {
-    margin: 20px;
+    margin: 20px 0;
 }
 
 #hint, #js-puzzle {
     font-size: 18px;
     margin-bottom: 20px;
+}
+
+#encoded-message {
+    margin-top: 20px;
 }
